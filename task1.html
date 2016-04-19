@@ -1,0 +1,30 @@
+<html>
+	<title>Task 1</title>
+	<head>
+		<script type="text/javascript" src="https://dl.dropboxusercontent.com/content_link/zojEcp3xwGGffjXazLtQaqGhh6cyM9iLgD8AcaZXKhESyBjCmjXN1hWcQF0ShLQt/file"> </script>
+	</head>
+
+	<body>
+		<p> x: <input type = "text" id="x"></p>
+		<p> y: <input type = "text" id="y"></p>
+		<p> z: <input type = "text" id="z"></p>
+		<p id="result"> Result: </p>
+		<input type="button" value="Check" onclick="check()">
+		<script>
+			function check()
+			{
+				var a = parseInt(document.getElementById("x").value);
+				var b = parseInt(document.getElementById("y").value);
+				var c = parseInt(document.getElementById("z").value);
+				if(a != "" && b != "" && c != "")
+				{
+					var v = new Vec3(a,b,c); 
+					var text = " Min: " + v.min() + " Mid: " + v.mid() + ", Max:" + v.max();
+					document.getElementById("result").innerHTML += text;
+				}
+				else
+					alert("Enter all values	");
+			}
+		</script>
+	</body>
+</html>
